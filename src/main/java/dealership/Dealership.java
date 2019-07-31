@@ -56,4 +56,9 @@ public class Dealership {
         stock.add(car);
         till.takeMoney(car.getPrice());
     }
+
+    public void repair(Car car) {
+        till.takeMoney(car.getDamage());
+        car.setDamage(0);
+    }
 }
