@@ -33,7 +33,6 @@ public class DealershipTest {
 
     @Test
     public void canAddToStock() {
-
         dealership.addToStock(electricCar);
         assertEquals(1, dealership.getStock().size());
     }
