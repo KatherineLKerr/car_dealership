@@ -11,15 +11,17 @@ public abstract class Car {
     private Tyres tyres;
     private String name;
     private String colour;
-    private int price;
+    private int fullPrice;
+    private int damage;
 
-    public Car(Doors doors, Engine engine, Tyres tyres, String name, String colour, int price) {
+    public Car(Doors doors, Engine engine, Tyres tyres, String name, String colour, int fullPrice, int damage) {
         this.doors = doors;
         this.engine = engine;
         this.tyres = tyres;
         this.name = name;
         this.colour = colour;
-        this.price = price;
+        this.fullPrice = fullPrice;
+        this.damage = damage;
     }
 
     public Doors getDoors() {
@@ -43,6 +45,14 @@ public abstract class Car {
     }
 
     public int getPrice() {
-        return price;
+        return fullPrice - damage;
+    }
+
+    public int getDamage() {
+        return damage;
+    }
+
+    public void setDamage(int damage) {
+        this.damage = damage;
     }
 }

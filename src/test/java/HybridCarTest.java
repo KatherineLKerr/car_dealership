@@ -19,7 +19,7 @@ public class HybridCarTest {
         doors = new Doors(4, false);
         engine = new Engine("hybrid");
         tyres = new Tyres(4, "normal");
-        hybridCar = new HybridCar(doors, engine, tyres, "car", "blue", 5000);
+        hybridCar = new HybridCar(doors, engine, tyres, "car", "blue", 5000, 0);
     }
 
     @Test
@@ -60,5 +60,11 @@ public class HybridCarTest {
     @Test
     public void hasPrice() {
         assertEquals(5000, hybridCar.getPrice());
+    }
+
+    @Test
+    public void damageAltersPrice() {
+        hybridCar.setDamage(1000);
+        assertEquals(4000, hybridCar.getPrice());
     }
 }

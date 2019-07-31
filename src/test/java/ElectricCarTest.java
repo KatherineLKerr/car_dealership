@@ -20,7 +20,7 @@ public class ElectricCarTest {
         doors = new Doors(4, true);
         engine = new Engine("electric");
         tyres = new Tyres(4, "normal");
-        electricCar = new ElectricCar(doors, engine, tyres, "car", "blue", 5000);
+        electricCar = new ElectricCar(doors, engine, tyres,"car", "blue", 5000, 0);
     }
 
     @Test
@@ -61,5 +61,11 @@ public class ElectricCarTest {
     @Test
     public void hasPrice() {
         assertEquals(5000, electricCar.getPrice());
+    }
+
+    @Test
+    public void damageAltersPrice() {
+        electricCar.setDamage(1000);
+        assertEquals(4000, electricCar.getPrice());
     }
 }

@@ -25,7 +25,7 @@ public class DealershipTest {
         doors = new Doors(4, true);
         engine = new Engine("electric");
         tyres = new Tyres(4, "normal");
-        electricCar = new ElectricCar(doors, engine, tyres, "car", "blue", 5000);
+        electricCar = new ElectricCar(doors, engine, tyres, "car", "blue", 5000, 0);
     }
 
     @Test

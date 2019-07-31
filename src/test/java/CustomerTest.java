@@ -23,7 +23,7 @@ public class CustomerTest {
         doors = new Doors(4, false);
         engine = new Engine("hybrid");
         tyres = new Tyres(4, "normal");
-        hybridCar = new HybridCar(doors, engine, tyres, "car", "blue", 5000);
+        hybridCar = new HybridCar(doors, engine, tyres, "car", "blue", 5000, 0);
     }
 
     @Test
