@@ -51,4 +51,9 @@ public class Dealership {
         }
         stock.remove(index);
     }
+
+    public void buyCar(Car car) {
+        stock.add(car);
+        till.takeMoney(car.getPrice());
+    }
 }
